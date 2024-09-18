@@ -14,7 +14,7 @@ def hello():
 @app.route('/name',methods=['GET'])
 def name():
     name = str(request.args.get('name'))
-    return 'Hello' + name
+    return 'Hello ' + name
 
 
 # initiating the program
