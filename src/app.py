@@ -13,7 +13,7 @@ def hello():
 
 @app.route('/name',methods=['GET'])
 def name():
-    name = float(request.args.get('name'))
+    name = str(request.args.get('name'))
     return 'Hello' + name
 
 
