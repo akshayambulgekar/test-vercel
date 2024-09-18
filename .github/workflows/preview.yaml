@@ -22,7 +22,7 @@ jobs:
             - name: Set up Python
               uses: actions/setup-python@v2
               with:
-                python-version: '3.6'  # You can change the version as needed
+                python-version: '3.9'  # You can change the version as needed
 
             # Install dependencies from requirements.txt
             - name: Install Dependencies
