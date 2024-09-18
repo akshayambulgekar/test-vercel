@@ -21,7 +21,7 @@ jobs:
             - name: Set up Python
               uses: actions/setup-python@v2
               with:
-                python-version: '3.9'  # Adjust to the Python version you're using
+                python-version: '3.6'  # Adjust to the Python version you're using
 
             # Install dependencies from requirements.txt
             - name: Install Dependencies
@@ -37,10 +37,7 @@ jobs:
             - name: Pull Vercel Environment Information
               run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-            # Build Project (Optional, Flask apps may not need this step)
-            - name: Build Project Artifacts
-              run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
+        
             # Deploy Project to Vercel
             - name: Deploy to Vercel
               run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
