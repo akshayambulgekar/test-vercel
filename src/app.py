@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, Payppy! :)'
 
+@app.route('/hello')
+def hello_world():
+    return 'Hello'
+
 
 # initiating the program
 
